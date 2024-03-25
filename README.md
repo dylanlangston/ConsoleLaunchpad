@@ -4,7 +4,9 @@
     <img src="./icon.png" alt="ConsoleLaunchpad 🕹️" align="center"></img>
   </p>
 </a>
-<h4 align="center">An (unofficial) AWS Console Federated Sign-In Tool</h4>
+<p align="center">
+  <strong>An (unofficial) AWS Console Federated Sign-In Tool</strong>
+</p>
 
 
 ### Overview
