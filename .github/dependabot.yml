@@ -1,0 +1,32 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    open-pull-requests-limit: 50
+    commit-message:
+      prefix: "C# - "
+    directory: "./src"
+    schedule:
+      interval: "weekly"
+    labels:
+      - ":label: Dependencies"
+      - ":technologist: C# :green_circle:"
+  - package-ecosystem: "github-actions"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "Github Actions - "
+    directory: ./.github/workflows/
+    schedule:
+      interval: "weekly"
+    labels:
+      - ":label: Dependencies"
+      - ":technologist: Github Actions :brown_circle:"
+  - package-ecosystem: "devcontainers"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "Dev Container - "
+    directory: ./.devcontainer
+    schedule:
+      interval: "weekly"
+    labels:
+      - ":label: Dependencies"

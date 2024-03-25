@@ -1,0 +1,27 @@
+{
+	"name": "ConsoleLaunchpad 🕹️",
+	"build": { 
+		"dockerfile": "devcontainer.Dockerfile",
+		"target": "base",
+		"context": ".."
+	},
+	"containerUser": "vscode",
+	"postCreateCommand": "make setup",
+	"runArgs": ["--volume=/var/lib/docker", "--privileged"],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csdevkit",
+				"AvaloniaTeam.vscode-avalonia",
+				"ms-vscode.makefile-tools",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode-remote.remote-containers",
+				"github.vscode-github-actions",
+				"GitHub.codespaces",
+				"bierner.markdown-preview-github-styles",
+				"bierner.markdown-mermaid",
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+}
