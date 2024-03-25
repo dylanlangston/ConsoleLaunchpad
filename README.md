@@ -50,7 +50,7 @@ graph TD
 
 ### Minimal Implementation
 For anyone asking "how does this all works", here's a minimal implementation in C#:
-```
+```csharp
 using System;
 using Amazon.IdentityManagement;
 using Amazon.IdentityManagement.Model;
