@@ -12,9 +12,9 @@
   <a href="https://dotnet.microsoft.com/en-us/"><img alt="C#" src="https://img.shields.io/badge/C%23-8.0-AC99EA.svg"></a>
   <a href="https://www.avaloniaui.net/"><img alt="Avalonia" src="https://img.shields.io/nuget/v/Avalonia?label=Avalonia&color=8b44ac"></a>
   <a href="https://github.com/dylanlangston/ConsoleLaunchpad/actions/workflows/build.yml"><img alt="GitHub Workflow CI/CD" src="https://img.shields.io/github/actions/workflow/status/dylanlangston/ConsoleLaunchpad/build.yml?label=CI%2FCD"></a>
-  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/dylanlangston/ConsoleLaunchpad"></a>
+  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/dylanlangston/ConsoleLaunchpad?label=License"></a>
   <a href="https://github.com/dylanlangston/ConsoleLaunchpad/releases/latest"><img alt="Latest Build" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdylanlangston%ConsoleLaunchpad%2Freleases&query=%24%5B%3A1%5D.tag_name&label=Latest%20Build&color=%234c1"></a>
-  <a href="https://api.github.com/repos/dylanlangston/ConsoleLaunchpad"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dylanlangston/ConsoleLaunchpad"></a>
+  <a href="https://api.github.com/repos/dylanlangston/ConsoleLaunchpad"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dylanlangston/ConsoleLaunchpad?label=Repo%20Size"></a>
 </p>
 
 ### Overview 👀
