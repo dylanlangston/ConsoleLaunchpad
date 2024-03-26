@@ -94,6 +94,7 @@ public partial class App : Application
             {
                 DataContext = viewModel
             };
+            singleViewPlatform.MainView.Unloaded += (s, e) => Shutdown(viewModel);
         }
     }
 

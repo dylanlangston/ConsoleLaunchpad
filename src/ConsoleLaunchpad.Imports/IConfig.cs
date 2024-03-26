@@ -18,6 +18,7 @@ namespace ConsoleLaunchpad.Imports
     {
         Unknown,
         Browser,
-        Desktop
+        Desktop,
+        Android
     }
 }

@@ -7,7 +7,10 @@ RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod
 
 # Install General Dependencies
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-     && apt-get -y install --no-install-recommends ca-certificates bash curl make git dotnet-sdk-8.0
+     && apt-get -y install --no-install-recommends ca-certificates bash curl make git dotnet-sdk-8.0 android-sdk
+
+# Setup dotnet workloads
+RUN dotnet workload install android wasm-tools
 
 # Install Docker
 RUN install -m 0755 -d /etc/apt/keyrings \

@@ -5,57 +5,16 @@ using ConsoleLaunchpad.Imports;
 
 namespace ConsoleLaunchpad.Desktop.Exports
 {
-    [Export(typeof(ILogger))]
+    [Export(typeof(IConfig))]
     [Shared]
-    public class Logger : ILogger
+    public sealed class DesktopConfig : IConfig
     {
-        public bool ShouldLog(LogLevel level) => level.ShouldLog(App.Config.LogLevel);
-        public void Log(LogLevel level, string message)
-        {
-            var messageTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
-            var foreground = Console.ForegroundColor;
-            switch (level)
-            {
-                case LogLevel.None:
-                    break;
-                case LogLevel.Trace:
-                    Trace.WriteLine($"{messageTime} - {message}");
-                    break;
-                case LogLevel.Debug:
-                    Debug.WriteLine($"{messageTime} - {message}");
-                    break;
-                case LogLevel.Information:
+        public PlatformType PlatformType { get => PlatformType.Desktop; }
+
 #if DEBUG
-                    if (Debugger.IsAttached) Debug.WriteLine($"{messageTime} - {message}");
-#endif
-                    Console.WriteLine($"{messageTime} - {message}");
-                    break;
-                case LogLevel.Warning:
-#if DEBUG
-                    if (Debugger.IsAttached) Debug.WriteLine($"{messageTime} - {message}");
-#endif
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"{messageTime} - {message}");
-                    Console.ForegroundColor = foreground;
-                    break;
-                case LogLevel.Error:
-#if DEBUG
-                    if (Debugger.IsAttached) Debug.WriteLine($"{messageTime} - {message}");
-#endif
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{messageTime} - {message}");
-                    Console.ForegroundColor = foreground;
-                    break;
-                case LogLevel.Critical:
-#if DEBUG
-                    if (Debugger.IsAttached) Debug.WriteLine($"{messageTime} - {message}");
-#endif
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine($"{messageTime} - {message}");
-                    Console.ForegroundColor = foreground;
-                    break;
-            }
-        }
-        public void Log(LogLevel level, Exception err) => Log(level, err.ToString());
+        public LogLevel LogLevel { get => LogLevel.Trace; }
+#else
+        public LogLevel LogLevel { get => LogLevel.Critical; }
+#endif    
     }
 }

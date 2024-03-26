@@ -7,6 +7,7 @@
     <WasmRuntimeAssetsLocation>./_framework</WasmRuntimeAssetsLocation>
     <PublishTrimmed>true</PublishTrimmed>
     <InvariantGlobalization>true</InvariantGlobalization>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>

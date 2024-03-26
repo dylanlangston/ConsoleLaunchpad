@@ -7,7 +7,7 @@ namespace ConsoleLaunchpad.Desktop.Exports
 {
     [Export(typeof(ILogger))]
     [Shared]
-    public class Logger : ILogger
+    public class DesktopLogger : ILogger
     {
         public bool ShouldLog(LogLevel level) => level.ShouldLog(App.Config.LogLevel);
         public void Log(LogLevel level, string message)

@@ -21,7 +21,7 @@ public class Authentication
     public static List<Profile> ListProfiles() {
         return new List<Profile>();
     }
-    public static void AddProfile(Profile profile) {
+    public static bool AddProfile(Profile profile) {
         return false;
     }
     public static bool RemoveProfile(Profile profile) {

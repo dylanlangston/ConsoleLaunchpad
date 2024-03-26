@@ -10,9 +10,10 @@ public class AuthenticationTests
     }
 
     [Test]
-    public void GetURL()
+    public async Task GetURL()
     {
-        ConsoleLaunchpad.Core.Authentication.GetURL();
-        Assert.Pass();
+        _ = await Authentication.GetURL(new Authentication.Profile());
+        Console.WriteLine("foobar");
+        Assert.Pass("Foobar");
     }
 }
