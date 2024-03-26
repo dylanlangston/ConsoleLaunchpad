@@ -7,10 +7,16 @@ RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod
 
 # Install General Dependencies
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-     && apt-get -y install --no-install-recommends ca-certificates bash curl make git dotnet-sdk-8.0 android-sdk python3 default-jre sdkmanager
+     && apt-get -y install --no-install-recommends ca-certificates bash curl make git dotnet-sdk-8.0 python3 default-jdk sdkmanager
 
 # Setup dotnet workloads
 RUN dotnet workload install android wasm-tools
+
+# Accept sdkmanager licenes
+RUN yes | sdkmanager --licenses
+
+# Install Android SDK
+RUN sdkmanager "cmdline-tools;latest" "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
 # Install Docker
 RUN install -m 0755 -d /etc/apt/keyrings \
