@@ -15,7 +15,7 @@ This tool simplifies access to the AWS Console by leveraging the [GetFederationT
 ### Features
 - **Efficient Sign-In**: Streamlines the sign-in process to the AWS Console by utilizing the GetFederationToken API.
 - **Effective Security**: Offers a reasonably secure sign-in method without necessitating 2FA, suitable for users requiring regular access to the AWS Console.
-- **Cross-Platform Compatibility**: Single codebase can be built on Desktop, Web, and Mobile.
+- **Cross-Platform Compatibility**: Single codebase can be built for Desktop, Web, and Mobile.
 - **User-Friendly Interface**: Intuitive UI design facilitates easy navigation and usage for both novice and experienced users.
 
 ### Demo
