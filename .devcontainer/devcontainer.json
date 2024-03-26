@@ -6,7 +6,7 @@
 		"context": ".."
 	},
 	"containerUser": "vscode",
-	"postCreateCommand": "make setup",
+	"postCreateCommand": "sudo make setup",
 	"runArgs": ["--volume=/var/lib/docker", "--privileged"],
 	"customizations": {
 		"vscode": {
@@ -21,7 +21,15 @@
 				"bierner.markdown-preview-github-styles",
 				"bierner.markdown-mermaid",
 				"redhat.vscode-yaml"
-			]
+			],
+			"settings": {
+				"dotnetAcquisitionExtension.existingDotnetPath": [
+					{
+						"extensionId": "AvaloniaTeam.vscode-avalonia",
+						"path": "/usr/bin/dotnet"
+					}
+				]
+			}
 		}
 	}
 }
