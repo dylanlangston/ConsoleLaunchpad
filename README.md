@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://dotnet.microsoft.com/en-us/"><img alt="C#" src="https://img.shields.io/badge/C%23-8.0-AC99EA.svg"></a>
+  <a href="https://dotnet.microsoft.com/"><img alt="C#" src="https://img.shields.io/badge/C%23-8.0-AC99EA.svg"></a>
   <a href="https://www.avaloniaui.net/"><img alt="Avalonia" src="https://img.shields.io/nuget/v/Avalonia?label=Avalonia&color=8b44ac"></a>
   <a href="https://github.com/dylanlangston/ConsoleLaunchpad/actions/workflows/build.yml"><img alt="GitHub Workflow CI/CD" src="https://img.shields.io/github/actions/workflow/status/dylanlangston/ConsoleLaunchpad/build.yml?label=CI%2FCD"></a>
   <a href="https://github.com/dylanlangston/ConsoleLaunchpad/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/dylanlangston/ConsoleLaunchpad?label=License"></a>
@@ -18,7 +18,7 @@
 </p>
 
 ### Overview 👀
-This tool simplifies access to the AWS Console by leveraging the [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html) API, allowing users to sign in swiftly and securely using their local AWS credentials. It caters to individuals who need frequent access to the AWS Console without constantly requiring them to enter their 2-Factor Authentication (2FA) details. Built with [C#](https://learn.microsoft.com/en-us/dotnet/csharp/) and [Avalonia](https://www.avaloniaui.net/) to ensure a consistent expierence across different platforms while still using a single unified codebase. This is a community effort and not affiliated with Amazon/AWS, if you're having any problems please open an [issue](#support).
+This tool simplifies access to the AWS Console by leveraging the [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html) API, allowing users to sign in swiftly and securely using their local AWS credentials. It caters to individuals who need frequent access to the AWS Console without constantly requiring them to enter their 2-Factor Authentication (2FA) details. Built with [C#](https://dotnet.microsoft.com/) and [Avalonia](https://www.avaloniaui.net/) to ensure a consistent expierence across different platforms while still using a single unified codebase. This is a community effort and not affiliated with Amazon/AWS, if you're having any problems please open an [issue](#support).
 
 ### Features ✨
 - [x] 🔑 **Efficient Sign-In**: Streamlines the sign-in process to the AWS Console by utilizing the GetFederationToken API.
@@ -120,10 +120,21 @@ class Program
 
 ### Resources ℹ️
 Here are some additional resources regarding the GetFederationToken API and its usage:
-- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_federated-users.html#id_roles_common-scenarios_federated-users-idbroker
-- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken
-- https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html
-- https://docs.aws.amazon.com/sdkfornet/v3/apidocs/items/SecurityToken/TGetFederationTokenRequest.html
+<table>
+  <tr>
+    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_federated-users.html#id_roles_common-scenarios_federated-users-idbroker">AWS IAM User Guide - Federated Users</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken">AWS IAM User Guide - GetFederationToken</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html">AWS STS API Reference</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://docs.aws.amazon.com/sdkfornet/v3/apidocs/items/SecurityToken/TGetFederationTokenRequest.html">AWS SDK for .NET API Docs</a></td>
+  </tr>
+</table>
+
 
 ### Contributions 🙌
 Contributions to this project are welcome! Feel free to submit bug reports, feature requests, or pull requests via [GitHub](https://github.com/dylanlangston/consolelaunchpad).
