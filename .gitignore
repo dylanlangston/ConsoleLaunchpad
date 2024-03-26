@@ -485,3 +485,4 @@ $RECYCLE.BIN/
 
 # Avalonia Temp files
 src/*/.avalonia*/*
+.mono/
