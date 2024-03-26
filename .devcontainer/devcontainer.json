@@ -31,5 +31,8 @@
 				]
 			}
 		}
+	},
+	"containerEnv": {
+		"AndroidSdkDirectory": "/opt/android-sdk"
 	}
 }
