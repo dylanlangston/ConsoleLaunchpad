@@ -33,6 +33,7 @@
 		}
 	},
 	"containerEnv": {
-		"AndroidSdkDirectory": "/opt/android-sdk"
+		"AndroidSdkDirectory": "/opt/android-sdk",
+		"DOTNET_CLI_TELEMETRY_OPTOUT": "1"
 	}
 }
