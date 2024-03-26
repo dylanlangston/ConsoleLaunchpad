@@ -41,13 +41,13 @@ graph TD
         Android["ConsoleLaunchpad.Android"]
     end
 
-    Main -->|Business Logic| Core
-    Imports -->|Application Interfaces| Core
-    Core -->|User Interface| Browser
-    Core -->|User Interface| Desktop
-    Core -->|User Interface| Android
-    Main -->|Unit Tests| Tests
-    Core -->|Integration Tests| Tests
+    Core -->|Business Logic| Main
+    Imports -->|Application Interfaces| Main
+    Main -->|User Interface| Browser
+    Main -->|User Interface| Desktop
+    Main -->|User Interface| Android
+    Core -->|Unit Tests| Tests
+    Main -->|Integration Tests| Tests
 ```
 
 ### Minimal Implementation
