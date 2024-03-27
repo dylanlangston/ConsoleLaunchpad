@@ -18,7 +18,9 @@ namespace ConsoleLaunchpad.Imports
         public T2 Type { get; }
     }
 
-    public interface IViewModelDialogBase : IViewModelBase { }
+    public interface IViewModelDialogBase : IViewModelBase {
+        public bool CanClose { get; }
+     }
 
     public interface IViewModelDialogBase<T1, T2, T3> : IViewModelDialogBase, IDisposable
         where T1 : IViewModelDialogBase<T1, T2, T3>

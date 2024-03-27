@@ -11,7 +11,8 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme />
+        <FluentTheme DensityStyle="Compact" />
         <themes:MaterialTheme />
+        <StyleInclude Source="/Styles.axaml" />
     </Application.Styles>
 </Application>

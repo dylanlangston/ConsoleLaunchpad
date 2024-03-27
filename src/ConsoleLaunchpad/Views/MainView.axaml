@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:converters="clr-namespace:ConsoleLaunchpad.Converters"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dialogHost="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:ConsoleLaunchpad.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -16,5 +17,16 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <ContentControl Content="{Binding CurrentView, Converter={StaticResource ViewLocator}}" />
+  <dialogHost:DialogHost
+    dialogHost:DialogHostStyle.CornerRadius="10"
+    CloseOnClickAway="{Binding CloseDialogOnClickAway}"
+    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+    IsOpen="{Binding DialogOpen}">
+    <dialogHost:DialogHost.DialogContent>
+      <Panel>
+        <ContentControl Content="{Binding DialogViewModel, Converter={StaticResource ViewLocator}}" />
+      </Panel>
+    </dialogHost:DialogHost.DialogContent>
+    <ContentControl Content="{Binding CurrentView, Converter={StaticResource ViewLocator}}" />
+  </dialogHost:DialogHost>
 </UserControl>

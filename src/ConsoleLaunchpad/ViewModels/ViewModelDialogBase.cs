@@ -1,9 +1,13 @@
 using System;
+using System.Text.Json.Serialization;
 using ConsoleLaunchpad.Imports;
 
 namespace ConsoleLaunchpad.ViewModels
 {
-    public abstract class ViewModelDialogBase : ViewModelBase, IViewModelDialogBase { }
+    public abstract class ViewModelDialogBase : ViewModelBase, IViewModelDialogBase {
+        [JsonIgnore]
+        public virtual bool CanClose { get => false; }
+     }
 
     public abstract class ViewModelDialogBase<T, T2, T3> : ViewModelDialogBase,
         IViewModelDialogBase<T, T2, T3>

@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace ConsoleLaunchpad.Views
 {
-    public partial class ProfilesView : UserControl
+    public partial class ErrorDialogView : UserControl
     {
-        public ProfilesView()
+        public ErrorDialogView()
         {
             InitializeComponent();
         }

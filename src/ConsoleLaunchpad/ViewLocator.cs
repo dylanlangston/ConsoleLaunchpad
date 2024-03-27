@@ -51,7 +51,6 @@ namespace ConsoleLaunchpad
             catch (Exception e)
             {
                 App.Logger.IfShouldLogCritical(() => e);
-                name = string.Empty;
                 return null;
             }
 
@@ -75,15 +74,13 @@ namespace ConsoleLaunchpad
                 }
                 catch (Exception e)
                 {
-                    App.Logger.IfShouldLogCritical(() => e);
-                    return new ErrorView(e);
+                    return OnError(e, true);
                 }
             }
             else
             {
                 var e = new Exception($"Control '{name}' not found.");
-                App.Logger.IfShouldLogCritical(() => e);
-                return new ErrorView(e);
+                return OnError(e, true);
             }
         }
 
@@ -102,11 +99,12 @@ namespace ConsoleLaunchpad
                         {
                             try
                             {
+                                if (name.Contains("Profile")) throw new Exception("foobar");
                                 await data.Init();
                             }
                             catch (Exception er)
                             {
-                                App.Logger.IfShouldLogCritical(() => er);
+                                OnError(er, false);
                             }
                         }).ConfigureAwait(false);
                     }
@@ -115,21 +113,25 @@ namespace ConsoleLaunchpad
                 }
                 catch (Exception e)
                 {
-                    App.Logger.IfShouldLogCritical(() => e);
-                    return new ErrorView(e);
+                    return OnError(e, true);
                 }
             }
             else
             {
                 var e = new Exception($"Control '{name}' not found.");
-                App.Logger.IfShouldLogCritical(() => e);
-                return new ErrorView(e);
+                return OnError(e, true);
             }
         }
 
         public bool Match(object? data)
         {
             return data is ViewModelBase;
+        }
+
+        public Control? OnError(Exception er, bool fatal) {
+            App.Logger.IfShouldLogCritical(() => er);
+            App.OnError((er, fatal));
+            return null;
         }
     }
 }

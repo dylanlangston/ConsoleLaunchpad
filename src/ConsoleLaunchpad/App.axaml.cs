@@ -20,12 +20,23 @@ public partial class App : Application
     public static readonly IConfig Config = MEF.GetExport<IConfig>() ?? new NullConfig();
     public static readonly ISettings Settings = MEF.GetExport<ISettings>() ?? new NullSettings();
     public static readonly ILogger Logger = MEF.GetExport<ILogger>() ?? new NullLogger();
+    public static void OnError(AppErrorEventArgs e) => ((App?)App.Current)?.ErrorOccured?.Invoke(Current, e);
+    
+    event EventHandler<AppErrorEventArgs>? ErrorOccured;
 
     public override void Initialize()
     {
         App.Logger.IfShouldLogInformation(() => "App Framework Initialization Started");
 
         AvaloniaXamlLoader.Load(this);
+    }
+
+    public IViewModelBase GetVM() {
+        var VM = new MainViewModel();
+        ErrorOccured += (s, e) => {
+            VM.OpenErrorDialog(e.Exception, e.Fatal);
+        };
+        return VM;
     }
 
     const double DefaultWidth = 750;
@@ -40,7 +51,7 @@ public partial class App : Application
         // });
 
         SetupViewModel(
-            new MainViewModel(),
+            GetVM(),
             WindowState.Normal,
             DefaultWidth,
             DefaultHeight,
@@ -69,7 +80,7 @@ public partial class App : Application
     }
 
     void SetupViewModel(
-        ViewModelBase viewModel,
+        IViewModelBase viewModel,
         WindowState windowState,
         double width,
         double height,
@@ -100,18 +111,30 @@ public partial class App : Application
 
     ITheme LoadOrCreateDefaultTheme()
     {
-        var primary = PrimaryColor.Cyan;
+        var primary = PrimaryColor.Blue;
         var primaryColor = SwatchHelper.Lookup[(MaterialColor)primary];
 
-        var secondary = SecondaryColor.Orange;
+        var secondary = SecondaryColor.Lime;
         var secondaryColor = SwatchHelper.Lookup[(MaterialColor)secondary];
 
-        return Theme.Create(Theme.Dark, primaryColor, secondaryColor);
+        return Theme.Create(Theme.Light, primaryColor, secondaryColor);
     }
 
-    void Shutdown(ViewModelBase viewModel)
+    void Shutdown(IViewModelBase viewModel)
     {
         viewModel.Dispose();
         Settings.Dispose();
     }
+}
+
+public class AppErrorEventArgs : EventArgs {
+    public Exception Exception;
+    public bool Fatal;
+    public AppErrorEventArgs(Exception exception, bool fatal) : base() {
+        Exception = exception;
+        Fatal = fatal;
+    }
+
+    public static implicit operator AppErrorEventArgs((Exception err, bool fatal) args) => new(args.err, args.fatal);
+    public static implicit operator (Exception err, bool fatal)(AppErrorEventArgs args) => (args.Exception, args.Fatal);
 }
