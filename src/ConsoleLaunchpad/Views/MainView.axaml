@@ -27,6 +27,9 @@
         <ContentControl Content="{Binding DialogViewModel, Converter={StaticResource ViewLocator}}" />
       </Panel>
     </dialogHost:DialogHost.DialogContent>
-    <ContentControl Content="{Binding CurrentView, Converter={StaticResource ViewLocator}}" />
+    <DockPanel>
+      <ContentControl Content="{Binding CurrentView, Converter={StaticResource ViewLocator}}" DockPanel.Dock="Top"  />
+      <ContentControl Content="{Binding MenuBar, Converter={StaticResource ViewLocator}}" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" />
+    </DockPanel>
   </dialogHost:DialogHost>
 </UserControl>

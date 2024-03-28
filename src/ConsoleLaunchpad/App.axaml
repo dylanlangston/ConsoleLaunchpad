@@ -12,7 +12,7 @@
 
     <Application.Styles>
         <FluentTheme DensityStyle="Compact" />
-        <themes:MaterialTheme />
+        <themes:MaterialTheme BaseTheme="Dark" PrimaryColor="Blue" SecondaryColor="Lime" />
         <StyleInclude Source="/Styles.axaml" />
     </Application.Styles>
 </Application>

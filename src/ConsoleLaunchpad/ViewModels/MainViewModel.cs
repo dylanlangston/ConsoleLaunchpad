@@ -9,7 +9,13 @@ namespace ConsoleLaunchpad.ViewModels;
 
 public class MainViewModel : ReactiveObject, IViewModelBaseWithDialog, IViewModelBase
 {
-    public IViewModelBase _currentView = new ProfileViewModel();
+    private IViewModelBase _menuBar = new MenubarViewModel();
+    public IViewModelBase MenuBar
+    {
+        get => _menuBar;
+    }
+
+    private IViewModelBase _currentView = new ProfileViewModel();
     public IViewModelBase CurrentView
     {
         get => _currentView;

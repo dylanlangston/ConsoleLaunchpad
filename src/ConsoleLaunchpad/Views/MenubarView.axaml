@@ -3,6 +3,8 @@
              xmlns:converters="clr-namespace:ConsoleLaunchpad.Converters"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
+             xmlns:icons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
              xmlns:vm="clr-namespace:ConsoleLaunchpad.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="ConsoleLaunchpad.Views.MenubarView"
@@ -16,5 +18,9 @@
     <vm:MenubarViewModel />
   </Design.DataContext>
 
-  <TextBlock Text="Hello World" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <controls:ColorZone Height="56" Padding="12" Mode="PrimaryMid">
+    <Grid ColumnDefinitions="Auto,24,*">
+      <ToggleButton Grid.Column="0" Classes="Flat TransparentBack" Padding="4" Width="{Binding $self.Bounds.Height}" Content="{icons:MaterialIconExt Menu}" />
+    </Grid>
+  </controls:ColorZone>
 </UserControl>
