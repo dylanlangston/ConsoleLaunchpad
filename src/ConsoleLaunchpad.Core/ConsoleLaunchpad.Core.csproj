@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.Core" Version="3.7.303.1" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.303.5" />
     <PackageReference Include="AWSSDK.IdentityManagement" Version="3.7.300.61" />
-    <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.300.62" />
+    <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.300.66" />
   </ItemGroup>
 
 </Project>
