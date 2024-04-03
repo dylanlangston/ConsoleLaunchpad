@@ -9,12 +9,12 @@
 </p>
 
 <p align="center">
-  <a href="https://dotnet.microsoft.com/"><img alt="C#" src="https://img.shields.io/badge/C%23-8.0-AC99EA.svg"></a>
-  <a href="https://www.avaloniaui.net/"><img alt="Avalonia" src="https://img.shields.io/nuget/v/Avalonia?label=Avalonia&color=8b44ac"></a>
-  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/actions/workflows/build.yml"><img alt="GitHub Workflow CI/CD" src="https://img.shields.io/github/actions/workflow/status/dylanlangston/ConsoleLaunchpad/build.yml?label=CI%2FCD"></a>
-  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/dylanlangston/ConsoleLaunchpad?label=License"></a>
-  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/releases/latest"><img alt="Latest Build" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdylanlangston%ConsoleLaunchpad%2Freleases&query=%24%5B%3A1%5D.tag_name&label=Latest%20Build&color=%234c1"></a>
-  <a href="https://api.github.com/repos/dylanlangston/ConsoleLaunchpad"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dylanlangston/ConsoleLaunchpad?label=Repo%20Size"></a>
+  <a href="https://dotnet.microsoft.com/"><img alt="C#" src="https://img.shields.io/badge/C%23-8.0-AC99EA.svg?style=flat-square"></a>
+  <a href="https://www.avaloniaui.net/"><img alt="Avalonia" src="https://img.shields.io/nuget/v/Avalonia?label=Avalonia&color=8b44ac&style=flat-square"></a>
+  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/actions/workflows/build.yml"><img alt="GitHub Workflow CI/CD" src="https://img.shields.io/github/actions/workflow/status/dylanlangston/ConsoleLaunchpad/build.yml?label=CI%2FCD&style=flat-square"></a>
+  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/dylanlangston/ConsoleLaunchpad?label=License&style=flat-square"></a>
+  <a href="https://github.com/dylanlangston/ConsoleLaunchpad/releases/latest"><img alt="Latest Build" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdylanlangston%ConsoleLaunchpad%2Freleases&query=%24%5B%3A1%5D.tag_name&label=Latest%20Build&color=%234c1&style=flat-square"></a>
+  <a href="https://api.github.com/repos/dylanlangston/ConsoleLaunchpad"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dylanlangston/ConsoleLaunchpad?label=Repo%20Size&style=flat-square"></a>
 </p>
 
 ### Overview 👀
@@ -38,9 +38,9 @@ This tool simplifies access to the AWS Console by leveraging the [GetFederationT
 ### Dev Environment 💻
 This repository includes a *[devcontainer.json](.devcontainer/devcontainer.json)* to get up and running quickly with a full-featured development environment in the cloud![^local-development]
 
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=flat&label=GitHub+Codespaces&message=Open&color=lightgrey&logo=github)](https://codespaces.new/dylanlangston/ConsoleLaunchpad)
-[![Open in Dev Container](https://img.shields.io/static/v1?style=flat&label=Dev+Container&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dylanlangston/ConsoleLaunchpad)
-[![Open in DevPod](https://img.shields.io/static/v1?style=flat&label=DevPod&message=Open&color=9933CC&logo=devdotto)](https://devpod.sh/open#https://github.com/dylanlangston/ConsoleLaunchpad)
+[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+GitHub+Codespaces&color=lightgrey&logo=github)](https://codespaces.new/dylanlangston/ConsoleLaunchpad)
+[![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+Dev+Container&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dylanlangston/ConsoleLaunchpad)
+[![Open in DevPod](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+DevPod&color=9933CC&logo=devdotto)](https://devpod.sh/open#https://github.com/dylanlangston/ConsoleLaunchpad)
 
 
 ### Solution Architecture 🏰
