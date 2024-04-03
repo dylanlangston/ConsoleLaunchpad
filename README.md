@@ -36,12 +36,51 @@ This tool simplifies access to the AWS Console by leveraging the [GetFederationT
 `Build instructions coming soon...`
 
 ### Dev Environment 💻
-This repository includes a *[devcontainer.json](.devcontainer/devcontainer.json)* to get up and running quickly with a full-featured development environment in the cloud![^local-development]
+<table>
+  <tr>
+    <td colspan="3">
+      This repository offers a streamlined development environment setup using a <a href=".devcontainer/devcontainer.json"><code>devcontainer.json</code></a> file, allowing you to get up and running quickly with a fully-featured environment in the cloud.<sup><a href="#local-development" id="fnref-local-development">[1]</a></sup> Use one of the following links to get started:
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">
+        <a href="https://codespaces.new/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+GitHub+Codespaces&color=lightgrey&logo=github" alt="Open in GitHub Codespaces"></a>
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+Dev+Container&color=blue&logo=visualstudiocode" alt="Open Dev Container"></a>
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <a href="https://devpod.sh/open#https://github.com/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+DevPod&color=9933CC&logo=devdotto" alt="Open DevPod"></a>
+      </p>
+    </td>
+  </tr>
+</table>
 
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+GitHub+Codespaces&color=lightgrey&logo=github)](https://codespaces.new/dylanlangston/ConsoleLaunchpad)
-[![Open in Dev Container](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+Dev+Container&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dylanlangston/ConsoleLaunchpad)
-[![Open in DevPod](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+DevPod&color=9933CC&logo=devdotto)](https://devpod.sh/open#https://github.com/dylanlangston/ConsoleLaunchpad)
-
+<table>
+  <tr>
+    <td colspan="2">
+      If you want to browse the source code without the need to build, you can do so conveniently on GitHub.dev or VSCode.dev:
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align="center">
+        <a href="https://github.dev/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=View+on+GitHub.dev&color=lightgrey&logo=github" alt="Edit on GitHub.dev"></a>
+      </p>
+    </td>
+    <td>
+      <p align="center">
+        <a href="https://vscode.dev/github/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=View+on+VSCode.dev&color=blue&logo=visualstudiocode" alt="Open in vscode.dev"></a>
+      </p>
+    </td>
+  </tr>
+</table>
+</p>
 
 ### Solution Architecture 🏰
 ```mermaid
@@ -147,4 +186,13 @@ This tool is licensed under the [MIT License](https://opensource.org/licenses/MI
 ### Support 🆘
 For any inquiries or assistance, please open an [issue](https://github.com/dylanlangston/consolelaunchpad/issues/new/choose).
 
-[^local-development]: For local development check out [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and [DevPod](https://devpod.sh/).
+<hr/>
+<sub>
+<section>
+  <ol dir="auto">
+    <li id="local-development">
+    <p>For local development check out <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers</a> and <a href="https://devpod.sh/">DevPod</a>. <a href="#fnref-local-development" aria-label="Back to reference 1">↩</a></p>
+    </li>
+  </ol>
+</section>
+</sub>
