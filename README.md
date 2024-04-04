@@ -183,7 +183,7 @@ This tool is licensed under the [MIT License](https://opensource.org/licenses/MI
 ### Support 🆘
 For any inquiries or assistance, please open an [issue](https://github.com/dylanlangston/consolelaunchpad/issues/new/choose).
 
-<hr/>
+<h2 id="footer"></h2>
 <sub>
 <section>
   <ol dir="auto">
