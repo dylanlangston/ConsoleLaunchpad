@@ -38,42 +38,39 @@ This tool simplifies access to the AWS Console by leveraging the [GetFederationT
 ### Dev Environment 💻
 <table>
   <tr>
-    <td colspan="3">
+    <td colspan="6">
       This repository offers a streamlined development environment setup using a <a href=".devcontainer/devcontainer.json"><code>devcontainer.json</code></a> file, allowing you to get up and running quickly with a fully-featured environment in the cloud.<sup><a href="#local-development" id="fnref-local-development">[1]</a></sup> Use one of the following links to get started:
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="2">
       <p align="center">
         <a href="https://codespaces.new/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+GitHub+Codespaces&color=lightgrey&logo=github" alt="Open in GitHub Codespaces"></a>
       </p>
     </td>
-    <td>
+    <td colspan="2">
       <p align="center">
         <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+Dev+Container&color=blue&logo=visualstudiocode" alt="Open Dev Container"></a>
       </p>
     </td>
-    <td>
+    <td colspan="2">
       <p align="center">
         <a href="https://devpod.sh/open#https://github.com/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=Open+DevPod&color=9933CC&logo=devdotto" alt="Open DevPod"></a>
       </p>
     </td>
   </tr>
-</table>
-
-<table>
   <tr>
-    <td colspan="2">
+    <td colspan="6">
       If you want to browse the source code without the need to build, you can do so conveniently on GitHub.dev or VSCode.dev:
     </td>
   </tr>
   <tr>
-    <td>
+    <td colspan="3">
       <p align="center">
         <a href="https://github.dev/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=View+on+GitHub.dev&color=lightgrey&logo=github" alt="Edit on GitHub.dev"></a>
       </p>
     </td>
-    <td>
+    <td colspan="3">
       <p align="center">
         <a href="https://vscode.dev/github/dylanlangston/ConsoleLaunchpad"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=&message=View+on+VSCode.dev&color=blue&logo=visualstudiocode" alt="Open in vscode.dev"></a>
       </p>
