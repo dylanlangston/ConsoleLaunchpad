@@ -10,7 +10,7 @@ updates:
       interval: "weekly"
     labels:
       - ":label: Dependencies"
-      - ":technologist: C# :green_circle:"
+      - ":technologist: C# :large_blue_circle:"
   - package-ecosystem: "github-actions"
     open-pull-requests-limit: 10
     commit-message:
